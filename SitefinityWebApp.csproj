@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{79138639-1B2F-47D3-9803-ACE7341CFF03}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SitefinityWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Telerik.Sitefinity">
+      <HintPath>..\Telerik.Sitefinity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="icpas_store.Controls.General\Helpers.cs" />
+    <Compile Include="icpas_store.Controls\Cart.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\Confirmation.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\CourseCatalog.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\CourseDetail.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\GroupRegistration.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\MeetingRegistration.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Controls\Review.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="icpas_store.Models.icpas\icpasWebUser.cs" />
+    <Compile Include="icpas_store.Models\Address.cs" />
+    <Compile Include="icpas_store.Models\BaseModel.cs" />
+    <Compile Include="icpas_store.Models\BaseSearchViewModel.cs" />
+    <Compile Include="icpas_store.Models\BusinessCode.cs" />
+    <Compile Include="icpas_store.Models\CalendarItem.cs" />
+    <Compile Include="icpas_store.Models\CatalogResult.cs" />
+    <Compile Include="icpas_store.Models\CertificateOfCompletionModel.cs" />
+    <Compile Include="icpas_store.Models\Company.cs" />
+    <Compile Include="icpas_store.Models\CompanyDetails.cs" />
+    <Compile Include="icpas_store.Models\CompanyMembers.cs" />
+    <Compile Include="icpas_store.Models\CompanyResultList.cs" />
+    <Compile Include="icpas_store.Models\CompanySearchList.cs" />
+    <Compile Include="icpas_store.Models\CPALocatorSearchCriteria.cs" />
+    <Compile Include="icpas_store.Models\CPETranscript.cs" />
+    <Compile Include="icpas_store.Models\EducationCategory.cs" />
+    <Compile Include="icpas_store.Models\FieldOfStudyViewModel.cs" />
+    <Compile Include="icpas_store.Models\FirmAdminRegistrants.cs" />
+    <Compile Include="icpas_store.Models\Functions.cs" />
+    <Compile Include="icpas_store.Models\LocatorCompanyDetail.cs" />
+    <Compile Include="icpas_store.Models\LocatorDetail.cs" />
+    <Compile Include="icpas_store.Models\Meeting.cs" />
+    <Compile Include="icpas_store.Models\MeetingDetailEx.cs" />
+    <Compile Include="icpas_store.Models\MeetingEducationUnits.cs" />
+    <Compile Include="icpas_store.Models\MeetingEx.cs" />
+    <Compile Include="icpas_store.Models\MeetingSearchParametersViewModel.cs" />
+    <Compile Include="icpas_store.Models\MeetingSpeaker.cs" />
+    <Compile Include="icpas_store.Models\MeetingSpeakerEx.cs" />
+    <Compile Include="icpas_store.Models\MeetingType.cs" />
+    <Compile Include="icpas_store.Models\MemberResultList.cs" />
+    <Compile Include="icpas_store.Models\MemberStatusType.cs" />
+    <Compile Include="icpas_store.Models\MemberType.cs" />
+    <Compile Include="icpas_store.Models\NameParam.cs" />
+    <Compile Include="icpas_store.Models\Order.cs" />
+    <Compile Include="icpas_store.Models\OrderLine.cs" />
+    <Compile Include="icpas_store.Models\OrderLineViewModel.cs" />
+    <Compile Include="icpas_store.Models\OrderViewModel.cs" />
+    <Compile Include="icpas_store.Models\Param.cs" />
+    <Compile Include="icpas_store.Models\ParticipantResultList.cs" />
+    <Compile Include="icpas_store.Models\PaymentType.cs" />
+    <Compile Include="icpas_store.Models\PeerDirectory.cs" />
+    <Compile Include="icpas_store.Models\PeerReviewList.cs" />
+    <Compile Include="icpas_store.Models\PeerReviewSearchCriteria.cs" />
+    <Compile Include="icpas_store.Models\PeerToPeerList.cs" />
+    <Compile Include="icpas_store.Models\PeerToPeerSearchCriteria.cs" />
+    <Compile Include="icpas_store.Models\PeerTopics.cs" />
+    <Compile Include="icpas_store.Models\Person.cs" />
+    <Compile Include="icpas_store.Models\PersonDetails.cs" />
+    <Compile Include="icpas_store.Models\PersonEx.cs" />
+    <Compile Include="icpas_store.Models\PersonFunctions.cs" />
+    <Compile Include="icpas_store.Models\Product.cs" />
+    <Compile Include="icpas_store.Models\ProductCategory.cs" />
+    <Compile Include="icpas_store.Models\ProductDiscountViewModel.cs" />
+    <Compile Include="icpas_store.Models\ProductEx.cs" />
+    <Compile Include="icpas_store.Models\ProductParts.cs" />
+    <Compile Include="icpas_store.Models\ProductPrice.cs" />
+    <Compile Include="icpas_store.Models\ProductRelation.cs" />
+    <Compile Include="icpas_store.Models\ProductRelationshipType.cs" />
+    <Compile Include="icpas_store.Models\SearchParams.cs" />
+    <Compile Include="icpas_store.Models\Survey.cs" />
+    <Compile Include="icpas_store.Models\TopicCode.cs" />
+    <Compile Include="icpas_store.Models\Venue.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCart.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartDetails.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartDetailsCount.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartDetailsSessionRank.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartEx.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartItemView.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartOrderView.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartProcessRequestViewModel.cs" />
+    <Compile Include="icpas_store.Models\WebShoppingCartType.cs" />
+    <Compile Include="icpas_store.Models\WebUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SitefinityWebApp\AzureWebRole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
